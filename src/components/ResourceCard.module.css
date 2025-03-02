@@ -1,0 +1,51 @@
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: var(--ifm-card-background-color);
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: var(--ifm-color-secondary-darkest);
+  margin-bottom: 0;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .card {
+  background-color: var(--ifm-card-background-color);
+}
+
+[data-theme='dark'] .cardDescription {
+  color: var(--ifm-color-secondary-lightest);
+}
